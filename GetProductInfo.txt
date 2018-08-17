@@ -1,0 +1,15 @@
+curl -X POST \
+"https://[store].myshopify.com/api/graphql" \
+-H "Content-Type: application/graphql" \
+-H "X-Shopify-Storefront-Access-Token: 1234567890" \
+-d '
+{
+  node(id: “id-from-GetProduct-call”) {
+    id
+    ... on Product {
+      title
+      availableForSale
+      tags
+    }
+  }
+}'

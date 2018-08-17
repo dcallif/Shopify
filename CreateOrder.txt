@@ -1,0 +1,20 @@
+curl -X POST \
+"https://[store].myshopify.com/admin/orders.json" \
+-H "Content-Type: application/json" \
+-H "X-Shopify-Storefront-Access-Token: 1234567890" \
+-d '{
+  "order": {
+    "email": "foo@bar.com",
+    "fulfillment_status": "Unfulfilled",
+    "line_items": [
+      {
+        "variant_id": 123456,
+        "quantity": 1,
+        "name": "test",
+        "price": "10.00",
+        "title": "test title"
+      }
+    ],
+    "financial_status": "pending"
+  }
+}'
