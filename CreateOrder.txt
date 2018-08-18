@@ -9,6 +9,7 @@ curl -X POST \
     "line_items": [
       {
         "variant_id": 123456,
+        "sku": "123456",
         "quantity": 1,
         "name": "test",
         "price": "10.00",
